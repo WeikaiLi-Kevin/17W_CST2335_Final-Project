@@ -18,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/tempTxt"
-        android:hint="Temperatur you want" />
+        android:hint="Temperature you want" />
 
     <Button
         android:text="Submit"
