@@ -19,6 +19,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".HouseSetting" />
+        <activity android:name=".HouseListView" />
+        <activity android:name=".HouseGarage" />
+        <activity android:name=".HouseTemperature" />
+        <activity android:name=".HouseWeather"></activity>
+
+
         <activity android:name=".kitchen_main" />
         <activity android:name=".kitchenMicrowave" />
         <activity android:name=".kitchenFridge" />
@@ -27,6 +34,7 @@
         <activity android:name=".AutomobileTemperature" />
         <activity android:name=".AutomobileRadio" />
         <activity android:name=".AutomobileLights"></activity>
+
 
     </application>
 
