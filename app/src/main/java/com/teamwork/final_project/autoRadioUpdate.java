@@ -58,20 +58,6 @@ public class autoRadioUpdate extends AppCompatActivity {
 
             }
         });
-    }/*
-    @Override
-    protected  void  onActivityResult(int requestCode, int resultCode, Intent data){
-        if ( resultCode == 2) {
-             stationNum = data.getExtras().get("updateStationNum").toString();//得到新Activity 关闭后返回的数据
-             radioNum = data.getExtras().get("updateRadioNum").toString();
-             deleteId = data.getExtras().getLong("id");
-             Log.i("update get result stati", "" + stationNum);
-            Log.i("update get result radio",radioNum);
-            Log.i("update id",deleteId+"");
-            // final ChatAdapter messageAdapter = new ChatAdapter(this);
-            //lv.setAdapter(messageAdapter);
+    }
 
-
-        }
-    }*/
 }
