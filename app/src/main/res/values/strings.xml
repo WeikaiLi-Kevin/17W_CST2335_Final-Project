@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Final-Project</string>
+    <string name="freezer_choose">Please choose a temperature</string>
+    <string name="fridge_choose">Please choose a temperature</string>
+
 </resources>
