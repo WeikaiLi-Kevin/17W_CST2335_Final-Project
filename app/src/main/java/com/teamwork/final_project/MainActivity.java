@@ -34,14 +34,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 5) {
-            Log.i(ACTIVITY_NAME, "Returned to MainActivity.onActivityResult");
-        }
-
-
         b_kitchen = (Button)findViewById(R.id.kitchen);
         b_kitchen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,10 +48,26 @@ public class MainActivity extends AppCompatActivity {
         autoBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view){
-                Intent ListAutoItems = new Intent(MainActivity.this,Automobile.class);
-                startActivity(ListAutoItems);
+              //  Intent ListAutoItems = new Intent(MainActivity.this,Automobile.class);
+              //  startActivity(ListAutoItems);
+
+                Intent intnt = new Intent(MainActivity.this, AutomobileFragmentDetails.class);
+               // intnt.putExtras(bun);//("ID" , l); //pass the Database ID to next activity
+                // intnt.putExtra("Message",arrayList.get(i));
+                //  intnt.putExtra("I",i);
+                startActivity(intnt); //go to view fragment details
+
             }
         });
+
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 5) {
+            Log.i(ACTIVITY_NAME, "Returned to MainActivity.onActivityResult");
+        }
+
+
 
 
     }

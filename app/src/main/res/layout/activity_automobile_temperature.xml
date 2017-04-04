@@ -27,4 +27,41 @@
         android:layout_below="@+id/tempTxt"
         android:layout_alignParentStart="true"
         android:id="@+id/tempBtn" />
+
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tempBtn"
+        android:layout_alignStart="@+id/tempBtn"
+        android:layout_marginTop="22dp"
+        android:id="@+id/temp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temp"
+        android:layout_alignStart="@+id/temp"
+        android:layout_marginTop="22dp"
+        android:id="@+id/min" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/min"
+        android:layout_alignEnd="@+id/min"
+        android:layout_marginTop="28dp"
+        android:id="@+id/max" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/max"
+        android:layout_alignStart="@+id/max"
+        android:layout_marginTop="19dp"
+        android:id="@+id/progressBar" />
 </RelativeLayout>
