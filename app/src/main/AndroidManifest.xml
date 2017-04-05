@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,11 +20,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".HouseListView" />
+        <activity android:name=".HouseGarage" />
+        <activity android:name=".HouseTemperature" />
+        <activity android:name=".HouseWeather" />
         <activity android:name=".kitchen_main" />
+
         <activity android:name=".kitchen_main_light" />
         <activity android:name=".kitchenFridge_detail" />
         <activity android:name=".kitchenMicrowave_detail" />
         <activity android:name=".kitchen_add_new"></activity>
+
+        <activity android:name=".kitchenMicrowave" />
+        <activity android:name=".kitchenFridge" />
+        <activity android:name=".kitchen_main_light" />
+        <activity android:name=".AutomobileTemperature" />
+        <activity android:name=".AutomobileRadio" />
+        <activity android:name=".AutomobileLights" />
+        <activity android:name=".AutoSettingsListView" />
+        <activity android:name=".AutomobileFragmentDetails" />
+        <activity android:name=".AutoListViewDetails" />
+        <activity android:name=".autoRadioUpdate" />
+        <activity android:name=".autoRadioAdd"></activity>
+
     </application>
 
 </manifest>
