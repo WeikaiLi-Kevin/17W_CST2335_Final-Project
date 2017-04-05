@@ -7,7 +7,7 @@
     <ImageView
         android:layout_width="20dp"
         android:layout_height="20dp"
-        app:srcCompat="@mipmap/lightoff"
+        app:srcCompat="@mipmap/light_off"
         android:id="@+id/autoLightOffImage"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"/>
