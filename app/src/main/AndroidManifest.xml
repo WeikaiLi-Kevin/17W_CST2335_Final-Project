@@ -3,7 +3,9 @@
     package="com.teamwork.final_project">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -23,6 +25,12 @@
         <activity android:name=".HouseTemperature" />
         <activity android:name=".HouseWeather" />
         <activity android:name=".kitchen_main" />
+
+        <activity android:name=".kitchen_main_light" />
+        <activity android:name=".kitchenFridge_detail" />
+        <activity android:name=".kitchenMicrowave_detail" />
+        <activity android:name=".kitchen_add_new"></activity>
+
         <activity android:name=".kitchenMicrowave" />
         <activity android:name=".kitchenFridge" />
         <activity android:name=".kitchen_main_light" />
@@ -34,6 +42,7 @@
         <activity android:name=".AutoListViewDetails" />
         <activity android:name=".autoRadioUpdate" />
         <activity android:name=".autoRadioAdd"></activity>
+
     </application>
 
 </manifest>
