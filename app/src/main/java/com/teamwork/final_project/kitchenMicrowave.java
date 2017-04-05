@@ -1,18 +1,22 @@
 package com.teamwork.final_project;
 
+import android.app.Fragment;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.CountDownTimer;
 import android.os.Vibrator;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class kitchenMicrowave extends AppCompatActivity {
+public class kitchenMicrowave extends Fragment {
 
     protected TextView timer;
     protected EditText entry;
@@ -26,18 +30,19 @@ public class kitchenMicrowave extends AppCompatActivity {
     String time;
     boolean exception;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.kitchen_activity_microwave);
+    String time_set;
 
-        timer = (TextView)findViewById(R.id.micro_timer);
-        entry = (EditText)findViewById(R.id.time_entry);
-        b_reset = (Button)findViewById(R.id.time_reset);
-        b_start = (Button)findViewById(R.id.time_start);
-        b_stop = (Button)findViewById(R.id.stop);
-        b_set = (Button)findViewById(R.id.time_set);
-        vibrator= (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.kitchen_activity_microwave, container, false);
+
+        timer = (TextView)v.findViewById(R.id.micro_timer);
+        entry = (EditText)v.findViewById(R.id.time_entry);
+        b_reset = (Button)v.findViewById(R.id.time_reset);
+        b_start = (Button)v.findViewById(R.id.time_start);
+        b_stop = (Button)v.findViewById(R.id.stop);
+        b_set = (Button)v.findViewById(R.id.time_set);
+        vibrator= (Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
         exception = true;
 
@@ -52,7 +57,7 @@ public class kitchenMicrowave extends AppCompatActivity {
                         time_trans = Long.valueOf(time) * 1000;
                         exception = false;
                     } catch (NumberFormatException e) {
-                        Toast.makeText(getApplicationContext(), "Please enter your cooking time", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity().getApplicationContext(), "Please enter your cooking time", Toast.LENGTH_LONG).show();
                     }
                     start = time_trans;
                     countdown = new Cook_timer(start, 1000);
@@ -100,7 +105,7 @@ public class kitchenMicrowave extends AppCompatActivity {
                 }
             });
 
-
+       return v;
 
     }
 
@@ -121,5 +126,7 @@ public class kitchenMicrowave extends AppCompatActivity {
         }
 
     }
+
+
 
 }
