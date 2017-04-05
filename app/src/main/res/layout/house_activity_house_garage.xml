@@ -10,14 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.teamwork.final_project.HouseGarage">
 
-    <Button
-        android:text="Go Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/garage" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,13 +19,32 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/garagePassword" />
 
+    <Button
+        android:id="@+id/btn_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@+id/garagePassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp" />
+
+    <Button
+        android:text="Go Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/garage"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="12dp" />
+
     <TextView
         android:text="Your Garage Password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/garagePassword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="85dp"
         android:textSize="20dp"
-        android:id="@+id/enterGaragePass" />
+        android:id="@+id/enterGaragePass"
+        android:layout_above="@+id/garagePassword"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

@@ -1,13 +1,16 @@
 package com.teamwork.final_project;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,6 +21,8 @@ public class HouseListView extends AppCompatActivity implements AdapterView.OnIt
 
     private String[] names = new String[]{"Garage", "House Temperature", "Outside Weather"};
     private int[] imgIds = new int[]{R.mipmap.car, R.mipmap.temp, R.mipmap.weather};
+
+    String snackbarMessage = "Done!";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +63,32 @@ public class HouseListView extends AppCompatActivity implements AdapterView.OnIt
         {
             case 0:  Intent newActivity = new Intent(this, HouseGarage.class);
                 startActivity(newActivity);
+                // Step 9 Toast
+                Toast.makeText(HouseListView.this, "Go to Garage", Toast.LENGTH_LONG).show();
                 break;
+
             case 1:  Intent newActivity1 = new Intent(this, HouseTemperature.class);
                 startActivity(newActivity1);
+                // Step 9 Toast
+                Toast.makeText(HouseListView.this, "Set House House_Temperature", Toast.LENGTH_LONG).show();
                 break;
-            case 2:  Intent newActivity2 = new Intent(this, HouseWeather.class);
-                startActivity(newActivity2);
+
+            case 2:
+                // Step 9 dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Do you want to check weather?");
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Intent intent = new Intent(HouseListView.this, HouseWeather.class);
+                        startActivityForResult(intent, 7);
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
                 break;
         }
     }
