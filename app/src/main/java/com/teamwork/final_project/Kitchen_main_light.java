@@ -11,7 +11,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 
-public class kitchen_main_light extends Activity {
+public class Kitchen_main_light extends Activity {
 
     EditText ed_light;
     Button b_dim;
@@ -39,7 +39,7 @@ public class kitchen_main_light extends Activity {
             @Override
             public void onClick(View v) {
                 bar.setVisibility(View.INVISIBLE);
-                Toast.makeText(kitchen_main_light.this, "The light set to " + light_set + " %", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Kitchen_main_light.this, "The light set to " + light_set + " %", Toast.LENGTH_SHORT).show();
             }
         });
 

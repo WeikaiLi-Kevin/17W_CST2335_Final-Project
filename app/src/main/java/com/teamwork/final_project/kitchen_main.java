@@ -120,7 +120,7 @@ public class kitchen_main extends AppCompatActivity {
                     }
 
                 if(type.equals("Light")){
-                    Intent intent3 = new Intent(kitchen_main.this, kitchen_main_light.class);
+                    Intent intent3 = new Intent(kitchen_main.this, Kitchen_main_light.class);
                     intent3.putExtra("dim", set);
                     startActivity(intent3);
                 }
