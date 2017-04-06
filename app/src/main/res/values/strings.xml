@@ -2,5 +2,6 @@
     <string name="app_name">Final-Project</string>
     <string name="freezer_choose">Please choose a temperature</string>
     <string name="fridge_choose">Please choose a temperature</string>
+    <string name="title_activity_main_toolbar">Final Project</string>
 
 </resources>
