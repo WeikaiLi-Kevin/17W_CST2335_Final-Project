@@ -74,7 +74,7 @@ public class AutomobileRadio extends AppCompatActivity {
                 }
                 for(int num = 0 ;num<results.getColumnCount();num++)
                     Log.i(ACTIVITY_NAME,results.getColumnName( num));
-                Toast.makeText(AutomobileRadio.this, "Submit successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(AutomobileRadio.this, getString(R.string.autoSubmitSuccessful), Toast.LENGTH_LONG).show();
             }
         });
     }

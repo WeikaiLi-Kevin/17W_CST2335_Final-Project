@@ -11,7 +11,7 @@
     tools:context="com.teamwork.final_project.AutoListViewDetails">
 
     <Button
-        android:text="Delete"
+        android:text="@string/autoDel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -20,7 +20,7 @@
         android:id="@+id/autoRadioDelBtn" />
 
     <Button
-        android:text="Update"
+        android:text="@string/autoUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/autoRadioDelBtn"
@@ -29,7 +29,7 @@
         android:id="@+id/autoRadioUpdateBtn" />
 
     <Button
-        android:text="add"
+        android:text="@string/autoAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/autoRadioUpdateBtn"

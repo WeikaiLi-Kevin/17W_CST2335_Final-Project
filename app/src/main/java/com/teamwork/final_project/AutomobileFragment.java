@@ -80,11 +80,11 @@ public class AutomobileFragment extends Fragment {
 
     private List<String> getSet(){
         ArrayList<String> set = new ArrayList<String>();
-        set.add("Temperature");
-        set.add("Radio Controls");
-        set.add("GPS directions");
-        set.add("Lights");
-        set.add("Settings History");
+        set.add(getString(R.string.autoTemperature));
+        set.add(getString(R.string.autoRadioControls));
+        set.add(getString(R.string.autoGPSDirections));
+        set.add(getString(R.string.autoLights));
+        set.add(getString(R.string.autoSettingsHistory));
         return set;
     }
 

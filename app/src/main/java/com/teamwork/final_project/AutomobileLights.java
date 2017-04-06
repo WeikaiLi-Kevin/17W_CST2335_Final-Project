@@ -42,19 +42,19 @@ public class AutomobileLights extends AppCompatActivity {
                 Log.d("Switch",sw.isChecked()+"");
 
                 if(rb1.isChecked()){
-                autoTempValues.put(DatabaseHelper.KEY_MESSAGE, "light turn off" );
+                autoTempValues.put(DatabaseHelper.KEY_MESSAGE, getString(R.string.autoDatabaseLightTurnOff) );
                     autoTempValues.put(DatabaseHelper.AUTO_COLUMN_NAME,"lightTurnOff");}
                 else if (rb2.isChecked()){
-                    autoTempValues.put(DatabaseHelper.KEY_MESSAGE, "normal light" );
+                    autoTempValues.put(DatabaseHelper.KEY_MESSAGE, getString(R.string.autoDatabaseLightNormal) );
                     autoTempValues.put(DatabaseHelper.AUTO_COLUMN_NAME,"lightNormal");}
                 else if (rb3.isChecked()){
-                    autoTempValues.put(DatabaseHelper.KEY_MESSAGE, "high light" );
+                    autoTempValues.put(DatabaseHelper.KEY_MESSAGE, getString(R.string.autoDatabaseLightHigh));
                     autoTempValues.put(DatabaseHelper.AUTO_COLUMN_NAME,"lightHigh");}
                 autoDB.insert(DatabaseHelper.AUTO_DATABASE_NAME, "", autoTempValues);
                 if(sw.isChecked())
-                    autoTempValues.put(DatabaseHelper.KEY_MESSAGE, "dimmable light turn on" );
+                    autoTempValues.put(DatabaseHelper.KEY_MESSAGE, getString(R.string.autoDatabaseDimLightTurnOn) );
                 else
-                    autoTempValues.put(DatabaseHelper.KEY_MESSAGE, "dimmable light turn off" );
+                    autoTempValues.put(DatabaseHelper.KEY_MESSAGE, getString(R.string.autoDatabaseDimLightTurnOff));
                 autoTempValues.put(DatabaseHelper.AUTO_COLUMN_NAME,"dimlightTurnOff");
                 // arrayId.add(
                 autoDB.insert(DatabaseHelper.AUTO_DATABASE_NAME, "", autoTempValues);
@@ -73,7 +73,7 @@ public class AutomobileLights extends AppCompatActivity {
                 }
                 for(int num = 0 ;num<results.getColumnCount();num++)
                     Log.i(ACTIVITY_NAME,results.getColumnName( num));
-                Toast.makeText(AutomobileLights.this, "Submit successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(AutomobileLights.this, getString(R.string.autoSubmitSuccessful), Toast.LENGTH_LONG).show();
             }
         });
     }

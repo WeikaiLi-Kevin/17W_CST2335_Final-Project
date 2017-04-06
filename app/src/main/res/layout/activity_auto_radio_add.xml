@@ -20,7 +20,7 @@
         android:hint="Radio Number" />
 
     <Button
-        android:text="Add"
+        android:text="@string/autoAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/autoRadioAddETNew"

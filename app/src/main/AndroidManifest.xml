@@ -3,9 +3,7 @@
     package="com.teamwork.final_project">
 
     <uses-permission android:name="android.permission.VIBRATE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
-
 
     <application
         android:allowBackup="true"
@@ -14,11 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".HouseListView" />
         <activity android:name=".HouseGarage" />
@@ -26,14 +20,11 @@
         <activity android:name=".HouseWeather" />
         <activity android:name=".kitchen_main" />
 
-        <activity android:name=".kitchen_main_light" />
         <activity android:name=".kitchenFridge_detail" />
         <activity android:name=".kitchenMicrowave_detail" />
-        <activity android:name=".kitchen_add_new"></activity>
+        <activity android:name=".kitchen_add_new" />
 
-        <activity android:name=".kitchenMicrowave" />
-        <activity android:name=".kitchenFridge" />
-        <activity android:name=".kitchen_main_light" />
+        <activity android:name=".Kitchen_main_light" />
         <activity android:name=".AutomobileTemperature" />
         <activity android:name=".AutomobileRadio" />
         <activity android:name=".AutomobileLights" />
@@ -41,8 +32,17 @@
         <activity android:name=".AutomobileFragmentDetails" />
         <activity android:name=".AutoListViewDetails" />
         <activity android:name=".autoRadioUpdate" />
-        <activity android:name=".autoRadioAdd"></activity>
+        <activity android:name=".autoRadioAdd" />
+        <activity
+            android:name=".MainActivityToolbar"
+            android:label="@string/title_activity_main_toolbar"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

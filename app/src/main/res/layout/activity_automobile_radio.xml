@@ -18,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/radioStation1"
-        android:hint="Station 1" />
+        android:hint="@string/autoStation1" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/radioStation6"
-        android:hint="Station 6"
+        android:hint="@string/autoStation6"
         android:layout_below="@+id/radioStation5"
         android:layout_alignParentStart="true" />
 
@@ -36,7 +36,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/radioStation2"
-        android:hint="Station 2"
+        android:hint="@string/autoStation2"
         android:layout_below="@+id/radioStation1"
         android:layout_alignParentStart="true" />
 
@@ -46,7 +46,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/radioStation3"
-        android:hint="Station 3"
+        android:hint="@string/autoStation3"
         android:layout_below="@+id/radioStation2"
         android:layout_alignParentStart="true" />
 
@@ -56,7 +56,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/radioStation4"
-        android:hint="Station 4"
+        android:hint="@string/autoStation4"
         android:layout_below="@+id/radioStation3"
         android:layout_alignParentStart="true" />
 
@@ -66,12 +66,12 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/radioStation5"
-        android:hint="Station 5"
+        android:hint="@string/autoStation5"
         android:layout_below="@+id/radioStation4"
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="SUBMIT"
+        android:text="@string/autoSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/radioBtn"
@@ -79,7 +79,7 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="mute"
+        android:text="@string/autoMute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/radioMute"

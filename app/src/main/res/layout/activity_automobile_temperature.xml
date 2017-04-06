@@ -18,10 +18,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/tempTxt"
-        android:hint="Temperature you want" />
+        android:hint="@string/autoTemperatureHint" />
 
     <Button
-        android:text="Submit"
+        android:text="@string/autoSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tempTxt"
@@ -30,38 +30,63 @@
 
 
     <TextView
-        android:text="TextView"
+        android:text="@string/autoCurrentTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tempBtn"
-        android:layout_alignStart="@+id/tempBtn"
-        android:layout_marginTop="22dp"
-        android:id="@+id/temp" />
+        android:layout_alignTop="@+id/temp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/autoCurrentTemp" />
+
+    <TextView
+        android:text="@string/autoMinTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/min"
+        android:layout_alignParentStart="true"
+        android:id="@+id/autoMinTemp" />
 
     <TextView
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/temp"
-        android:layout_alignStart="@+id/temp"
-        android:layout_marginTop="22dp"
-        android:id="@+id/min" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:id="@+id/max"
         android:layout_below="@+id/min"
-        android:layout_alignEnd="@+id/min"
-        android:layout_marginTop="28dp"
-        android:id="@+id/max" />
+        android:layout_toEndOf="@+id/autoMaxTemp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:id="@+id/min"
+        android:layout_below="@+id/temp"
+        android:layout_toEndOf="@+id/autoMinTemp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/temp"
+        android:layout_below="@+id/tempBtn"
+        android:layout_toEndOf="@+id/autoCurrentTemp" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/max"
-        android:layout_alignStart="@+id/max"
-        android:layout_marginTop="19dp"
-        android:id="@+id/progressBar" />
+        android:layout_marginTop="31dp"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/autoMaxTemp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/autoMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/autoMaxTemp"
+        android:layout_alignBaseline="@+id/max"
+        android:layout_alignBottom="@+id/max"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

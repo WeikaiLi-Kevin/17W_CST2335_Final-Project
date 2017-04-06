@@ -41,7 +41,7 @@ public class autoRadioUpdate extends AppCompatActivity {
                 for(int i = 0;i<1000;i++)
                 pb.setProgress(i);
 
-                Snackbar.make(v, "Update successfully", Snackbar.LENGTH_LONG)
+                Snackbar.make(v, getString(R.string.autoUpdateSuccessful), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
                // finish();

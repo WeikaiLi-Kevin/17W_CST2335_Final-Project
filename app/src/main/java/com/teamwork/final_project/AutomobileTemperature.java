@@ -80,7 +80,7 @@ public class AutomobileTemperature extends AppCompatActivity {
                 }
                 for(int num = 0 ;num<results.getColumnCount();num++)
                     Log.i(ACTIVITY_NAME,results.getColumnName( num));
-                Toast.makeText(AutomobileTemperature.this, "Submit successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(AutomobileTemperature.this, getString(R.string.autoSubmitSuccessful), Toast.LENGTH_LONG).show();
             }
         });
         TempQuery thread = new TempQuery();
@@ -153,9 +153,10 @@ public class AutomobileTemperature extends AppCompatActivity {
 
         public void onPostExecute(String work)
         {
-            tv1.setText("Current temperature: "+curTem);
-            tv2.setText("Minimum: "+min);
-            tv3.setText("Maximum: "+max);
+
+            tv1.setText(curTem);
+            tv2.setText(min);
+            tv3.setText(max);
             //img.setImageBitmap(pic);
             pb1.setVisibility(View.INVISIBLE);
         }
