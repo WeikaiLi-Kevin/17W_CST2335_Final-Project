@@ -53,9 +53,9 @@ public class AutoListViewDetails extends AppCompatActivity {
                 // Inflate and set the layout for the dialog
                 // Pass null as the parent view because its going in the dialog layout
                 builder1.setView(inf);
-
+                //builder1.setMessage(getString(R.string.autoDelMessage));
                 // Add action buttons
-                builder1.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                builder1.setPositiveButton(getString(R.string.autoOK), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         //Log.i("Dialog","1111");
@@ -69,7 +69,7 @@ public class AutoListViewDetails extends AppCompatActivity {
                         finish();
                     }
                 });
-                builder1.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+                builder1.setNegativeButton(getString(R.string.autoCancel),new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         // User cancelled the dialog
