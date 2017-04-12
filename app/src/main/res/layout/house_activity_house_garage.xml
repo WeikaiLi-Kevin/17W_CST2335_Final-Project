@@ -10,41 +10,38 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.teamwork.final_project.HouseGarage">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberPassword"
-        android:ems="10"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/garagePassword" />
-
     <Button
         android:id="@+id/btn_toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_below="@+id/garagePassword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp" />
+        android:text="@string/Toast"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:text="Go Back"
+        android:text="@string/GoBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/garage"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="12dp" />
+        android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:text="Your Garage Password"
+    <Switch
+        android:text="@string/Light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="85dp"
-        android:textSize="20dp"
-        android:id="@+id/enterGaragePass"
-        android:layout_above="@+id/garagePassword"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/doorSwitch"
+        android:layout_alignEnd="@+id/doorSwitch"
+        android:layout_marginTop="43dp"
+        android:id="@+id/lightSwitch" />
+
+    <Switch
+        android:text="@string/GarageDoor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/doorSwitch"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp" />
 
 </RelativeLayout>

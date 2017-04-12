@@ -39,7 +39,6 @@ public class AutoListViewDetails extends AppCompatActivity {
         delBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                     Intent data = new Intent();
                     data.putExtra("deleteStationNum", stationNum);
                 data.putExtra("deleteRadioNum",radioNum);

@@ -35,4 +35,39 @@
     <string name="autoDatabaseDimLightTurnOff">室内暗灯关</string>
     <string name="autoUpdateSuccessful">更新成功</string>
     <string name="autoDelMessage">确定删除吗？</string>
+
+    <string name="password">密码</string>
+    <string name="username">用户名</string>
+    <string name="AddSettings">添加新设定</string>
+    <string name="Toast">吐司</string>
+    <string name="GoBack">返回</string>
+    <string name="Light">灯</string>
+    <string name="GarageDoor">车库门</string>
+    <string name="TestToolbar">测试工具栏</string>
+    <string name="Database">室内温度表</string>
+    <string name="load">开始加载</string>
+    <string name="current">当前温度</string>
+    <string name="min">最低温度</string>
+    <string name="max">最高温度</string>
+    <string name="FragmentTest">测试宽屏</string>
+    <string name="ScheduledTime">设定时间: </string>
+    <string name="Time">时间</string>
+    <string name="HouseTemperature">设定室温: </string>
+    <string name="Temperature">室温</string>
+    <string name="RemoveSetting">删除设定</string>
+    <string name="UpdateSetting">更新设定</string>
+    <string name="Garage">车库</string>
+    <string name="HouseTem">室温</string>
+    <string name="OutsideWeather">天气</string>
+    <string name="Change">更改</string>
+    <string name="Back">返回</string>
+    <string name="Ask">你要查看天气吗？</string>
+    <string name="OK">是的</string>
+    <string name="Cancle">取消</string>
+    <string name="GotoGarage">调试车库</string>
+    <string name="SetHouseTemperature">设置室温</string>
+    <string name="TurnOn">开灯</string>
+    <string name="TurnOff">关灯</string>
+
+
 </resources>

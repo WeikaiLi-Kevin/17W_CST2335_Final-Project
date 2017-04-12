@@ -1,36 +1,39 @@
 package com.teamwork.final_project;
 
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class House_Database extends ListActivity implements OnItemClickListener {
     House_SQLiteHelper db = new House_SQLiteHelper(this);
     List<House_Temperature> list;
     ArrayAdapter<String> myAdapter;
+    Button addBtn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.house_main);
+        setContentView(R.layout.house_activity_house_database);
 
         // drop this database if already exists
         db.onUpgrade(db.getWritableDatabase(), 1, 2);
 
         //db.createTime(new House_Temperature("Scheduled Time", "House_Temperature"));
-
-        db.createTime(new House_Temperature("6:00 Temp", "20℃"));
-        db.createTime(new House_Temperature("9:00 Temp", "16℃"));
-        db.createTime(new House_Temperature("16:00 Temp", "20℃"));
-        db.createTime(new House_Temperature("22:00 Temp", "18℃"));
+        db.createTime(new House_Temperature("6:00", "20℃"));
+        db.createTime(new House_Temperature("9:00", "16℃"));
+        db.createTime(new House_Temperature("16:00", "20℃"));
+        db.createTime(new House_Temperature("22:00", "18℃"));
 
         // get all time
         list = db.getAllTime();
@@ -43,6 +46,7 @@ public class House_Database extends ListActivity implements OnItemClickListener 
         myAdapter = new ArrayAdapter<String>(this, R.layout.house_row_layout, R.id.listText, listTitle);
         getListView().setOnItemClickListener(this);
         setListAdapter(myAdapter);
+
     }
 
     @Override
