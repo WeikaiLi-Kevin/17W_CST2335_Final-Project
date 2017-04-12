@@ -10,18 +10,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.teamwork.final_project.HouseListView">
 
-    <ListView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_alignParentStart="true" />
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="377dp"
+            android:id="@+id/listView"
+            android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/houseBackMain"
-        android:text="Go Back"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/testToolbar"
+            android:text="@string/TestToolbar"/>
+    </LinearLayout>
+
 
 </RelativeLayout>

@@ -102,15 +102,6 @@ public class House_SQLiteHelper extends SQLiteOpenHelper {
         return houseTemperatures;
     }
 
-    ///////////////////////////////////
-
-
-
-
-
-
-    //////////////////////
-
     public int updateTime(House_Temperature houseTemperature) {
 
         // get reference of the TimeTempDB database

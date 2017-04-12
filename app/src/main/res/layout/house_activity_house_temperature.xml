@@ -11,7 +11,7 @@
     tools:context="com.teamwork.final_project.HouseTemperature">
 
     <Button
-        android:text="Scheduled Temperature (Database)"
+        android:text="@string/Database"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/houseTemperature"
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnupdate"
-            android:text="Start to load"/>
+            android:text="@string/load"/>
     </LinearLayout>
 
 

@@ -61,14 +61,14 @@ public class HouseWeather extends AppCompatActivity {
         final View dialogView = inflater.inflate(R.layout.house_activity_dialog_signin, null);
         dialogBuilder.setView(dialogView);
         final EditText edt = (EditText) dialogView.findViewById(R.id.username);
-        dialogBuilder.setPositiveButton("Change", new DialogInterface.OnClickListener() {
+        dialogBuilder.setPositiveButton(getString(R.string.Change), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 snackbarMessage = edt.getText().toString();
                 Snackbar.make(findViewById(android.R.id.content), "Sign in.", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
             }
         });
-        dialogBuilder.setNegativeButton("Back", new DialogInterface.OnClickListener() {
+        dialogBuilder.setNegativeButton(getString(R.string.Back), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
             }
         });
@@ -183,9 +183,9 @@ public class HouseWeather extends AppCompatActivity {
         }
 
         protected void onPostExecute(String result) {
-            currentT.setText("Current House_Temperature: " + current);
-            minT.setText("Minimum House_Temperature: " + min);
-            maxT.setText("Maximum House_Temperature: " + max);
+            currentT.setText( getString(R.string.current) + current);
+            minT.setText( getString(R.string.min) + min);
+            maxT.setText( getString(R.string.max) + max);
             img.setImageBitmap(pic);
             bar.setVisibility(View.INVISIBLE);
 
