@@ -4,7 +4,13 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -19,9 +25,6 @@ import java.util.Map;
 
 public class HouseListView extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
-    private String[] names = new String[]{"Garage", "House Temperature", "Outside Weather"};
-    private int[] imgIds = new int[]{R.mipmap.car, R.mipmap.temp, R.mipmap.weather};
-
     String snackbarMessage = "Done!";
 
     @Override
@@ -29,10 +32,16 @@ public class HouseListView extends AppCompatActivity implements AdapterView.OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.house_activity_house_list_view);
 
-        Button enterBtn = (Button) findViewById(R.id.houseBackMain);
+        //String[] names = new String[]{ "Garage", "House Temperature", "Outside Weather"};
+        String[] names = new String[]{ getString(R.string.Garage), getString(R.string.HouseTem), getString(R.string.OutsideWeather)};
+
+        int[] imgIds = new int[]{R.mipmap.car, R.mipmap.temp, R.mipmap.weather};
+
+
+        Button enterBtn = (Button) findViewById(R.id.testToolbar);
         enterBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(HouseListView.this, MainActivity.class);
+                Intent intent = new Intent(HouseListView.this, House_Toolbar.class);
                 startActivityForResult(intent, 5);
             }
         });
@@ -64,26 +73,26 @@ public class HouseListView extends AppCompatActivity implements AdapterView.OnIt
             case 0:  Intent newActivity = new Intent(this, HouseGarage.class);
                 startActivity(newActivity);
                 // Step 9 Toast
-                Toast.makeText(HouseListView.this, "Go to Garage", Toast.LENGTH_LONG).show();
+                Toast.makeText(HouseListView.this, getString(R.string.GotoGarage), Toast.LENGTH_LONG).show();
                 break;
 
-            case 1:  Intent newActivity1 = new Intent(this, HouseTemperature.class);
+            case 1:  Intent newActivity1 = new Intent(this, House_Database.class);
                 startActivity(newActivity1);
                 // Step 9 Toast
-                Toast.makeText(HouseListView.this, "Set House House_Temperature", Toast.LENGTH_LONG).show();
+                Toast.makeText(HouseListView.this, getString(R.string.SetHouseTemperature), Toast.LENGTH_LONG).show();
                 break;
 
             case 2:
                 // Step 9 dialog
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Do you want to check weather?");
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                builder.setTitle( getString(R.string.Ask) );
+                builder.setPositiveButton(getString(R.string.OK), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Intent intent = new Intent(HouseListView.this, HouseWeather.class);
                         startActivityForResult(intent, 7);
                     }
                 });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(getString(R.string.Cancle), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                     }
                 });
