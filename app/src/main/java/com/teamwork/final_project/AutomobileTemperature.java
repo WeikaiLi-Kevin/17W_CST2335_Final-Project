@@ -35,7 +35,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-import static com.teamwork.final_project.MainActivity.ACTIVITY_NAME;
+//import static com.teamwork.final_project.MainActivity.ACTIVITY_NAME;
 
 public class AutomobileTemperature extends AppCompatActivity {
     private SQLiteDatabase autoDB;
@@ -74,12 +74,12 @@ public class AutomobileTemperature extends AppCompatActivity {
                 int messageIndex = results.getColumnIndex(DatabaseHelper.KEY_MESSAGE);
                 results.moveToFirst();
                 while(!results.isAfterLast()) {
-                    Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
-                    Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
+            //        Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
+            //        Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
                    results.moveToNext();
                 }
                 for(int num = 0 ;num<results.getColumnCount();num++)
-                    Log.i(ACTIVITY_NAME,results.getColumnName( num));
+             //       Log.i(ACTIVITY_NAME,results.getColumnName( num));
                 Toast.makeText(AutomobileTemperature.this, getString(R.string.autoSubmitSuccessful), Toast.LENGTH_LONG).show();
             }
         });

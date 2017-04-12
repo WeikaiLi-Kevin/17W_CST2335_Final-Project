@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 import static com.teamwork.final_project.DatabaseHelper.AUTO_COLUMN_NAME;
 import static com.teamwork.final_project.DatabaseHelper.KEY_MESSAGE;
-import static com.teamwork.final_project.MainActivity.ACTIVITY_NAME;
+//import static com.teamwork.final_project.MainActivity.ACTIVITY_NAME;
 
 /**
  * Created by Li Weikai on 2017-04-03.
@@ -59,12 +59,12 @@ public class AutoSettingsListView extends AppCompatActivity {
             autoArrayId.add(results.getLong(results.getColumnIndex(DatabaseHelper.KEY_ID)));
 
             myAutoAdapter.notifyDataSetChanged();
-            Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
-            Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
+//            Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
+//            Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
             results.moveToNext();
         }
         for(int num = 0 ;num<results.getColumnCount();num++)
-            Log.i(ACTIVITY_NAME,results.getColumnName( num));
+//            Log.i(ACTIVITY_NAME,results.getColumnName( num));
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -149,8 +149,8 @@ Log.d("ArrayList",autoArrayType.get(i)+"");
             autoArrayId.add(results.getLong(results.getColumnIndex(DatabaseHelper.KEY_ID)));
 
             myAutoAdapter.notifyDataSetChanged();
-            Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
-            Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
+          //  Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
+          //  Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
             results.moveToNext();
         }
 
@@ -182,8 +182,8 @@ Log.d("ArrayList",autoArrayType.get(i)+"");
             autoArrayId.add(results.getLong(results.getColumnIndex(DatabaseHelper.KEY_ID)));
 
             myAutoAdapter.notifyDataSetChanged();
-            Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
-            Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
+           // Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
+          //  Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
             results.moveToNext();
         }
 
@@ -221,8 +221,8 @@ Log.d("ArrayList",autoArrayType.get(i)+"");
             autoArrayId.add(results.getLong(results.getColumnIndex(DatabaseHelper.KEY_ID)));
 
             myAutoAdapter.notifyDataSetChanged();
-            Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
-            Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
+            //Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
+           // Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
             results.moveToNext();
         }
 
