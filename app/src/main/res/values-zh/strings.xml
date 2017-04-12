@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="autoTemperature">温度</string>
+    <string name="autoRadioControls">广播</string>
+    <string name="autoGPSDirections">GPS导航</string>
+    <string name="autoLights">灯光调节</string>
+    <string name="autoSettingsHistory">历史记录</string>
+    <string name="autoTemperatureHint">请输入温度</string>
+    <string name="autoSubmit">提交</string>
+    <string name="autoCurrentTemp">当前温度: </string>
+    <string name="autoMaxTemp">最高温度: </string>
+    <string name="autoMinTemp">最低温度: </string>
+    <string name="autoStation1">广播频道1</string>
+    <string name="autoStation2">广播频道2</string>
+    <string name="autoStation3">广播频道3</string>
+    <string name="autoStation4">广播频道4</string>
+    <string name="autoStation5">广播频道5</string>
+    <string name="autoStation6">广播频道6</string>
+    <string name="autoMute">静音</string>
+    <string name="autoLightTurnOff">关灯</string>
+    <string name="autoLightNormal">普通亮度</string>
+    <string name="autoLightHigh">高亮度</string>
+    <string name="autoLightDim">室内暗灯</string>
+    <string name="autoDel">删除</string>
+    <string name="autoUpdate">更新</string>
+    <string name="autoAdd">添加</string>
+    <string name="autoRadioNum">广播频道</string>
+    <string name="autoSubmitSuccessful">提交成功</string>
+    <string name="autoCancel">取消</string>
+    <string name="autoOK">确定</string>
+    <string name="autoDatabaseLightTurnOff">关灯</string>
+    <string name="autoDatabaseLightNormal">普通灯光</string>
+    <string name="autoDatabaseLightHigh">高亮灯光</string>
+    <string name="autoDatabaseDimLightTurnOn">室内暗灯开</string>
+    <string name="autoDatabaseDimLightTurnOff">室内暗灯关</string>
+    <string name="autoUpdateSuccessful">更新成功</string>
+    <string name="autoDelMessage">确定删除吗？</string>
+</resources>

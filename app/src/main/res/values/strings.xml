@@ -1,3 +1,43 @@
 <resources>
     <string name="app_name">Final-Project</string>
+    <string name="freezer_choose">Please choose a temperature</string>
+    <string name="fridge_choose">Please choose a temperature</string>
+    <string name="title_activity_main_toolbar">Final Project</string>
+    <string name="autoTemperature">Temperature</string>
+    <string name="autoRadioControls">Radio Controls</string>
+    <string name="autoGPSDirections">GPS Directions</string>
+    <string name="autoLights">Lights</string>
+    <string name="autoSettingsHistory">Settings History</string>
+    <string name="autoTemperatureHint">Temperature you want</string>
+    <string name="autoSubmit">SUBMIT</string>
+    <string name="autoCurrentTemp">Current temperature: </string>
+    <string name="autoMaxTemp">Maximum temperature: </string>
+    <string name="autoMinTemp">Minimum temperature: </string>
+    <string name="autoStation1">station 1</string>
+    <string name="autoStation2">station 2</string>
+    <string name="autoStation3">station 3</string>
+    <string name="autoStation4">station 4</string>
+    <string name="autoStation5">station 5</string>
+    <string name="autoStation6">station 6</string>
+    <string name="autoMute">MUTE</string>
+    <string name="autoLightTurnOff">Turn Off</string>
+    <string name="autoLightNormal">Normal</string>
+    <string name="autoLightHigh">High</string>
+    <string name="autoLightDim">Dimmable Light</string>
+    <string name="autoDel">DELETE</string>
+    <string name="autoUpdate">UPDATE</string>
+    <string name="autoUpdateSuccessful">Update Successful</string>
+    <string name="autoAdd">ADD</string>
+    <string name="autoRadioNum">Radio Number</string>
+    <string name="autoSubmitSuccessful">Submit Successful</string>
+    <string name="autoCancel">CANCEL</string>
+    <string name="autoOK">OK</string>
+    <string name="autoDatabaseLightTurnOff">light turn off</string>
+    <string name="autoDatabaseLightNormal">normal light</string>
+    <string name="autoDatabaseLightHigh">high light</string>
+    <string name="autoDatabaseDimLightTurnOn">dimmable light turn on</string>
+    <string name="autoDatabaseDimLightTurnOff">dimmable light turn off</string>
+
+    <string name="autoDelMessage">Do you want to delete it?</string>
+    <string name="title_activity_auto_toolbar">AutoToolbar</string>
 </resources>
