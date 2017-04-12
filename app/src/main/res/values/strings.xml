@@ -26,9 +26,10 @@
     <string name="autoLightDim">Dimmable Light</string>
     <string name="autoDel">DELETE</string>
     <string name="autoUpdate">UPDATE</string>
+    <string name="autoUpdateSuccessful">Update Successful</string>
     <string name="autoAdd">ADD</string>
     <string name="autoRadioNum">Radio Number</string>
-    <string name="autoSubmitSuccessful">submit successful</string>
+    <string name="autoSubmitSuccessful">Submit Successful</string>
     <string name="autoCancel">CANCEL</string>
     <string name="autoOK">OK</string>
     <string name="autoDatabaseLightTurnOff">light turn off</string>
@@ -38,6 +39,7 @@
     <string name="autoDatabaseDimLightTurnOff">dimmable light turn off</string>
 
     <string name="autoDelMessage">Do you want to delete it?</string>
+
     <string name="enter_add">Enter device setting value</string>
     <string name="add_button">Add</string>
     <string name="enter_name">Enter device name</string>
@@ -55,4 +57,7 @@
     <string name="t_on">Light ON</string>
     <string name="t_off">Light OFF</string>
     <string name="dim_save">Save change</string>
+
+    <string name="title_activity_auto_toolbar">AutoToolbar</string>
+
 </resources>
