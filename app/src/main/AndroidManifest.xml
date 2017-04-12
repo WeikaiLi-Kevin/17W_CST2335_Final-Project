@@ -11,7 +11,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+
+        <activity android:name=".MainActivity"></activity>
+
         <activity android:name=".HouseListView" />
         <activity android:name=".HouseGarage" />
         <activity android:name=".HouseTemperature" />
@@ -42,8 +44,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".House_Toolbar" />
-        <activity android:name=".House_Data_MyAdapter"></activity>
+       
+        <activity
+            android:name=".AutoToolbar"
+            android:label="Automobile"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>

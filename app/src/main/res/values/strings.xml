@@ -26,9 +26,10 @@
     <string name="autoLightDim">Dimmable Light</string>
     <string name="autoDel">DELETE</string>
     <string name="autoUpdate">UPDATE</string>
+    <string name="autoUpdateSuccessful">Update Successful</string>
     <string name="autoAdd">ADD</string>
     <string name="autoRadioNum">Radio Number</string>
-    <string name="autoSubmitSuccessful">submit successful</string>
+    <string name="autoSubmitSuccessful">Submit Successful</string>
     <string name="autoCancel">CANCEL</string>
     <string name="autoOK">OK</string>
     <string name="autoDatabaseLightTurnOff">light turn off</string>
@@ -71,4 +72,5 @@
     <string name="TurnOff">Turn the Light Off</string>
 
     <string name="autoDelMessage">Do you want to delete it?</string>
+    <string name="title_activity_auto_toolbar">AutoToolbar</string>
 </resources>

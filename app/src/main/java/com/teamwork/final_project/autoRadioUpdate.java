@@ -21,15 +21,16 @@ public class autoRadioUpdate extends AppCompatActivity {
         final EditText ed = (EditText)findViewById(R.id.autoRadioUpdateETNew);
         Button btn = (Button)findViewById(R.id.autoRadioUpdateBtnNew);
         final ProgressBar pb = (ProgressBar)findViewById(R.id.autoProgressBar);
+        stationNum =  getIntent().getExtras().get("updateStationNum").toString();//得到新Activity 关闭后返回的数据
+        radioNum =  getIntent().getExtras().get("updateRadioNum").toString();
+        deleteId =  getIntent().getExtras().getLong("id");
+        Log.i("update get result stati", "" + stationNum);
+        Log.i("update get result radio",radioNum);
+        Log.i("update id",deleteId+"");
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                stationNum =  getIntent().getExtras().get("updateStationNum").toString();//得到新Activity 关闭后返回的数据
-                radioNum =  getIntent().getExtras().get("updateRadioNum").toString();
-                deleteId =  getIntent().getExtras().getLong("id");
-                Log.i("update get result stati", "" + stationNum);
-                Log.i("update get result radio",radioNum);
-                Log.i("update id",deleteId+"");
+
                 Intent data = new Intent();
                 data.putExtra("updateStationNum", stationNum);
                 data.putExtra("updateRadioNum",ed.getText().toString());
@@ -38,7 +39,7 @@ public class autoRadioUpdate extends AppCompatActivity {
                 //Log.i("delete", "" + id);
                 setResult(5, data);
                 pb.setVisibility(View.VISIBLE);
-                for(int i = 0;i<1000;i++)
+                for(int i = 0;i<100;i++)
                 pb.setProgress(i);
 
                 Snackbar.make(v, getString(R.string.autoUpdateSuccessful), Snackbar.LENGTH_LONG)
