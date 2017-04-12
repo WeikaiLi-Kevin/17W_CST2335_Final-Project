@@ -24,7 +24,7 @@
         <activity android:name=".kitchenMicrowave_detail" />
         <activity android:name=".kitchen_add_new" />
 
-        <activity android:name=".Kitchen_main_light" />
+        <activity android:name=".kitchen_main_light" />
         <activity android:name=".AutomobileTemperature" />
         <activity android:name=".AutomobileRadio" />
         <activity android:name=".AutomobileLights" />
