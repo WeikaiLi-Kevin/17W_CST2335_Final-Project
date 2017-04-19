@@ -4,6 +4,9 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+/**
+ * The class creates the fragment run on the phone
+ */
 public class kitchenMicrowave_detail extends AppCompatActivity {
 
     @Override
@@ -12,7 +15,7 @@ public class kitchenMicrowave_detail extends AppCompatActivity {
         setContentView(R.layout.activity_kitchen_microwave_detail);
 
         kitchenMicrowave km = new kitchenMicrowave();
-
+        //insert into a FrameLayout
         FragmentTransaction ft2 = getFragmentManager().beginTransaction();
         ft2.add(R.id.activity_kitchen_microwave_detail, km);
         ft2.commit();
