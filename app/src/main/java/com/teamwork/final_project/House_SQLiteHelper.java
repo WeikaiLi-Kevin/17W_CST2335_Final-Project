@@ -5,9 +5,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import java.util.LinkedList;
 import java.util.List;
+
+/**
+ * Created by Di Yuan on 18-Apr-17.
+ */
 
 public class House_SQLiteHelper extends SQLiteOpenHelper {
 
@@ -20,6 +23,7 @@ public class House_SQLiteHelper extends SQLiteOpenHelper {
     private static final String time = "time";
     private static final String temp = "temp";
 
+    // create String Array to hold columns
     private static final String[] COLUMNS = { time_ID, time, temp };
 
     public House_SQLiteHelper(Context context) {
@@ -41,51 +45,41 @@ public class House_SQLiteHelper extends SQLiteOpenHelper {
     }
 
     public void createTime(House_Temperature houseTemperature) {
-        // get reference of the BookDB database
+        // get reference of the database
         SQLiteDatabase db = this.getWritableDatabase();
-
         // make values to be inserted
         ContentValues values = new ContentValues();
         values.put(time, houseTemperature.getTime());
         values.put(temp, houseTemperature.getTemp());
-
         // insert houseTemperature
         db.insert(table_Time, null, values);
-
         // close database transaction
         db.close();
     }
 
     public House_Temperature readTime(int id) {
-        // get reference of the TimeTempDB database
+        // get reference of the database
         SQLiteDatabase db = this.getReadableDatabase();
-
         // get houseTemperature query
         Cursor cursor = db.query(table_Time, // a. table
                 COLUMNS, " id = ?", new String[] { String.valueOf(id) }, null, null, null, null);
-
-        // if results !=null, parse the first one
+        // if results != null, parse the first one
         if (cursor != null)
             cursor.moveToFirst();
-
         House_Temperature houseTemperature = new House_Temperature();
         houseTemperature.setId(Integer.parseInt(cursor.getString(0)));
         houseTemperature.setTime(cursor.getString(1));
         houseTemperature.setTemp(cursor.getString(2));
-
         return houseTemperature;
     }
 
     public List<House_Temperature> getAllTime() {
         List<House_Temperature> houseTemperatures = new LinkedList<House_Temperature>();
-
         // select houseTemperature query
         String query = "SELECT  * FROM " + table_Time;
-
-        // get reference of the BookDB database
+        // get reference of the database
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
-
         // parse all results
         House_Temperature houseTemperature = null;
         if (cursor.moveToFirst()) {
@@ -94,7 +88,6 @@ public class House_SQLiteHelper extends SQLiteOpenHelper {
                 houseTemperature.setId(Integer.parseInt(cursor.getString(0)));
                 houseTemperature.setTime(cursor.getString(1));
                 houseTemperature.setTemp(cursor.getString(2));
-
                 // Add houseTemperature to houseTemperatures
                 houseTemperatures.add(houseTemperature);
             } while (cursor.moveToNext());
@@ -103,28 +96,21 @@ public class House_SQLiteHelper extends SQLiteOpenHelper {
     }
 
     public int updateTime(House_Temperature houseTemperature) {
-
-        // get reference of the TimeTempDB database
+        // get reference of the database
         SQLiteDatabase db = this.getWritableDatabase();
-
         // make values to be inserted
         ContentValues values = new ContentValues();
         values.put("time", houseTemperature.getTime()); // get time
         values.put("temp", houseTemperature.getTemp()); // get temp
-
-        // update
+        // update database
         int i = db.update(table_Time, values, time_ID + " = ?", new String[] { String.valueOf(houseTemperature.getId()) });
-
         db.close();
         return i;
     }
-
-    // Deleting single houseTemperature
+    // delete single houseTemperature
     public void removeTime(House_Temperature houseTemperature) {
-
-        // get reference of the TimeTempDB database
+        // get reference of the database
         SQLiteDatabase db = this.getWritableDatabase();
-
         // delete houseTemperature
         db.delete(table_Time, time_ID + " = ?", new String[] { String.valueOf(houseTemperature.getId()) });
         db.close();

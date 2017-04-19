@@ -36,6 +36,10 @@
     <string name="autoUpdateSuccessful">更新成功</string>
     <string name="autoDelMessage">确定删除吗？</string>
 
+
+    <string name="AddSetting">添加新设定</string>
+    <string name="SnackBar">吐司</string>
+
     <string name="enter_add">请输入设备设定值</string>
     <string name="add_button">加入列表</string>
     <string name="enter_name">请输入设备名称</string>
@@ -60,6 +64,7 @@
     <string name="username">用户名</string>
     <string name="AddSettings">添加新设定</string>
     <string name="Toast">吐司</string>
+
     <string name="GoBack">返回</string>
     <string name="Light">灯</string>
     <string name="GarageDoor">车库门</string>
@@ -81,13 +86,23 @@
     <string name="OutsideWeather">天气</string>
     <string name="Change">更改</string>
     <string name="Back">返回</string>
-    <string name="Ask">你要查看天气吗？</string>
+    <string name="Ask">你要进入车库吗？</string>
     <string name="OK">是的</string>
-    <string name="Cancle">取消</string>
+    <string name="Cancel">取消</string>
     <string name="GotoGarage">调试车库</string>
     <string name="SetHouseTemperature">设置室温</string>
     <string name="TurnOn">开灯</string>
     <string name="TurnOff">关灯</string>
+    <string name="DoorOpen">开门</string>
+    <string name="DoorClose">关门</string>
+    <string name="HouseHelp">帮助</string>
+    <string name="HouseHelp1">作者：原迪</string>
+    <string name="HouseHelp2">版本：1.0.0</string>
+    <string name="HouseHelp3">房屋设置</string>
+    <string name="HouseHelp4">车库控制：控制开关和门</string>
+    <string name="HouseHelp5">室温控制：调节室温</string>
+    <string name="HouseHelp6">天气：查看室外天气</string>
+    <string name="HouseHelpOK">知道了</string>
 
 
 
