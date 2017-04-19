@@ -112,8 +112,8 @@ public class AutoListViewDetails extends AppCompatActivity {
                 // intnt.putExtra("Message",arrayList.get(i));
                 //  intnt.putExtra("I",i);
 
-                data.putExtra("updateStationNum", stationNum);
-                data.putExtra("updateRadioNum",radioNum);
+                data.putExtra("addStationNum", stationNum);
+                data.putExtra("addRadioNum",radioNum);
                 data.putExtra("id",id);
                 //Log.i("delete", "" + id);
                 //setResult(2, data);

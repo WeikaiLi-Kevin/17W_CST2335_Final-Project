@@ -52,7 +52,7 @@ public class MainActivityToolbar extends AppCompatActivity {
                 break;
             case R.id.Icon_automobile:
 
-                Intent intnt = new Intent(MainActivityToolbar.this, AutomobileFragmentDetails.class);
+                Intent intnt = new Intent(MainActivityToolbar.this, AutoToolbar.class);
 
                 startActivity(intnt); //go to view fragment details
 

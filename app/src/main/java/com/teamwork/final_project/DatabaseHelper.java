@@ -12,7 +12,7 @@ import android.util.Log;
 public class DatabaseHelper extends SQLiteOpenHelper{
     public final static String AUTO_DATABASE_NAME = "AutoDatabase";
     final static String AUTO_COLUMN_NAME = "SETTINGS";
-    final static int VERSION_NUM = 2;
+    final static int VERSION_NUM = 3;
     final static String  KEY_MESSAGE = "Message";
     final static String KEY_ID = "_id";
     public DatabaseHelper(Context ctx){
