@@ -11,14 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.teamwork.final_project.HouseWeather">
 
-    <Button
-        android:text="@string/GoBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/weather"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
-
     <ProgressBar
         style="android:attr/progressBarStyleHorizontal"
         android:id="@+id/progressBar"

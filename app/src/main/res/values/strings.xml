@@ -36,20 +36,19 @@
     <string name="autoDatabaseLightHigh">high light</string>
     <string name="autoDatabaseDimLightTurnOn">dimmable light turn on</string>
     <string name="autoDatabaseDimLightTurnOff">dimmable light turn off</string>
+    <string name="autoDelMessage">Do you want to delete it?</string>
 
-    <string name="password">password</string>
-    <string name="username">username</string>
-    <string name="AddSettings">Add Settings</string>
-    <string name="Toast">Toast</string>
+    <string name="AddSetting">Add Setting</string>
+    <string name="SnackBar">Welcome!</string>
     <string name="GoBack">Go Back</string>
     <string name="Light">Light</string>
     <string name="GarageDoor">Garage Door</string>
     <string name="TestToolbar">Test Toolbar</string>
     <string name="Database">Scheduled Temperature (Database)</string>
     <string name="load">Start to load</string>
-    <string name="current">current houseTemperature</string>
-    <string name="min">min houseTemperature</string>
-    <string name="max">max houseTemperature</string>
+    <string name="current">Current Temperature</string>
+    <string name="min">Min Temperature</string>
+    <string name="max">Max Temperature</string>
     <string name="FragmentTest">Fragment Test</string>
     <string name="ScheduledTime">Scheduled Time: </string>
     <string name="Time">Time</string>
@@ -62,13 +61,22 @@
     <string name="OutsideWeather">Outside Weather</string>
     <string name="Change">Change</string>
     <string name="Back">Back</string>
-    <string name="Ask">Do you want to check weather?</string>
-    <string name="OK">OK</string>
-    <string name="Cancle">Cancle</string>
+    <string name="Ask">Enter garage?</string>
+    <string name="OK">Yes</string>
+    <string name="Cancel">No</string>
     <string name="GotoGarage">Go to Garage</string>
     <string name="SetHouseTemperature">Set House Temperature</string>
     <string name="TurnOn">Turn the Light On</string>
     <string name="TurnOff">Turn the Light Off</string>
+    <string name="DoorOpen">Garage Door Open</string>
+    <string name="DoorClose">Garage Door Close</string>
+    <string name="HouseHelp">Help</string>
+    <string name="HouseHelp1">Author: Di Yuan</string>
+    <string name="HouseHelp2">Version: 1.0.0</string>
+    <string name="HouseHelp3">Instruction For House Setting</string>
+    <string name="HouseHelp4">Garage: control garage door and light</string>
+    <string name="HouseHelp5">Temperature: set house temperature</string>
+    <string name="HouseHelp6">Weather: check outside weather</string>
+    <string name="HouseHelpOK">OK</string>
 
-    <string name="autoDelMessage">Do you want to delete it?</string>
 </resources>

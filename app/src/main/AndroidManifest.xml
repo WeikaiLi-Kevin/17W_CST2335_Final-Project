@@ -12,13 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".HouseListView" />
+        <activity android:name=".HouseListView"  android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HouseGarage" />
-        <activity android:name=".HouseTemperature" />
         <activity android:name=".HouseWeather" />
         <activity android:name=".House_Database" />
         <activity android:name=".House_TemperatureActivity" />
-        <activity android:name=".House_Fragment" />
         <activity android:name=".kitchen_main" />
         <activity android:name=".kitchenFridge_detail" />
         <activity android:name=".kitchenMicrowave_detail" />
@@ -42,8 +40,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".House_Toolbar" />
-        <activity android:name=".House_Data_MyAdapter"></activity>
     </application>
 
 </manifest>
