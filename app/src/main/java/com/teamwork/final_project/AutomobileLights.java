@@ -26,9 +26,9 @@ public class AutomobileLights extends AppCompatActivity {
        // final EditText temp = (EditText) findViewById(R.id.tempTxt);
         Button btn = (Button) findViewById(R.id.autoLightsBtn);
         final RadioGroup rg = (RadioGroup) findViewById(R.id.autoRadioGroup);
-        final RadioButton rb1 = (RadioButton) findViewById(R.id.autoLightClose);
-        final RadioButton rb2 = (RadioButton) findViewById(R.id.autoLightNormal);
-        final RadioButton rb3 = (RadioButton) findViewById(R.id.autoLightHigh);
+        final RadioButton rb1 = (RadioButton) findViewById(R.id.autoLightClose);  //  button for closing light
+        final RadioButton rb2 = (RadioButton) findViewById(R.id.autoLightNormal);  //  button for open normal light
+        final RadioButton rb3 = (RadioButton) findViewById(R.id.autoLightHigh);   //  button for open high light
         final Switch sw = (Switch) findViewById(R.id.autoLightDimmable);
         DatabaseHelper autodbHelper = new DatabaseHelper(this);
         autoDB = autodbHelper.getWritableDatabase();

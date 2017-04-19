@@ -27,10 +27,11 @@ import static com.teamwork.final_project.DatabaseHelper.KEY_MESSAGE;
  */
 
 public class AutoSettingsListView extends AppCompatActivity {
-    public ArrayList<String> autoArrayList = new ArrayList<>();
-    public ArrayList<String> autoArrayType = new ArrayList<>();
 
-    public ArrayList<Long> autoArrayId = new ArrayList<>();
+    public ArrayList<String> autoArrayList = new ArrayList<>(); // store the auto information of the database
+    public ArrayList<String> autoArrayType = new ArrayList<>();  // store the auto type information of the database
+
+    public ArrayList<Long> autoArrayId = new ArrayList<>();// store the auto id information of the database
 
     Cursor results;
     autoAdapter myAutoAdapter;

@@ -13,12 +13,12 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:ems="10"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/tempTxt"
-        android:hint="@string/autoTemperatureHint" />
+        android:hint="@string/autoTemperatureHint"
+        android:inputType="number" />
 
     <Button
         android:text="@string/autoSubmit"

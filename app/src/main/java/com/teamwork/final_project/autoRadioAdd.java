@@ -20,19 +20,13 @@ public class autoRadioAdd extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //stationNum =  getIntent().getExtras().get("updateStationNum").toString();//得到新Activity 关闭后返回的数据
-                //radioNum =  getIntent().getExtras().get("updateRadioNum").toString();
-                //deleteId =  getIntent().getExtras().getLong("id");
-                //Log.i("update get result stati", "" + stationNum);
-                //Log.i("update get result radio",radioNum);
-                //Log.i("update id",deleteId+"");
+
                 Intent data = new Intent();
-               data.putExtra("addStationNum", "new station number");
-                data.putExtra("addRadioNum",ed.getText().toString());
+               data.putExtra("addStationNum", "new station number");  //   pass the station number(new station number) to the database
+                data.putExtra("addRadioNum",ed.getText().toString());       // pass the information input by user into database
                 Log.i("after update", "" + ed.getText().toString());
-                //data.putExtra("id",deleteId);
-                //Log.i("delete", "" + id);
-                setResult(6, data);
+
+                setResult(6, data);   //pass back by matching 6
                 finish();
 
 
