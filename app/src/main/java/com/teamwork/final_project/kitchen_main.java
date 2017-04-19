@@ -20,7 +20,10 @@ import android.widget.Toast;
 import static com.teamwork.final_project.kitchenDatabaseHelper.KEY_ID;
 import static com.teamwork.final_project.kitchenDatabaseHelper.TableName;
 
-
+/**
+ * Main listview of the kitchen devices
+ * Jiawei Guo
+ */
 public class kitchen_main extends AppCompatActivity {
 
     protected ListView list_kitchen;
@@ -48,7 +51,7 @@ public class kitchen_main extends AppCompatActivity {
         db = kdb.getWritableDatabase();
 
 
-
+        //the dialog to let users choose which type of device he/she would like to add
         b_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,14 +92,6 @@ public class kitchen_main extends AppCompatActivity {
             }
         });
 
-/*        String[] option = new String[]{"kitchenMicrowave",
-                "kitchenFridge", "Main Light"
-        };
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.kitchen_main_list, option);
-
-*/
-
         cursor = db.rawQuery("SELECT * FROM kitchen_device", null);
         String[] names = new String[] { KEY_NAME };
         int[] to = new int[] { R.id.list_name};
@@ -119,12 +114,15 @@ public class kitchen_main extends AppCompatActivity {
                 adapter.swapCursor(cursor);
                 adapter.notifyDataSetChanged();
                 Toast.makeText(kitchen_main.this, "Delete "+ type, Toast.LENGTH_LONG).show();
+                if(findViewById(R.id.frameHolder) != null){
+                    getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(R.id.frameHolder)).commit();
+                }
 
                 return false;
             }
         });
 
-
+        //add clicklistener to the listview of kitchen devices
         list_kitchen.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -140,13 +138,13 @@ public class kitchen_main extends AppCompatActivity {
                 String set = cursor.getString(index_setting);
                 String data_i = cursor.getString(index_id);
                 String name = cursor.getString(index_n);
-
+                //store values of database to a bundle
                 bundle = new Bundle();
                 bundle.putString("dataid", data_i);
                 bundle.putString("setdata", set);
                 bundle.putString("namedata", name);
 
-
+                //to check which type the item is and transit to corresponding activity
                     if(type.equals("Microwave")) {
                         if (findViewById(R.id.frameHolder) != null) {
                             km = new kitchenMicrowave();
@@ -184,7 +182,7 @@ public class kitchen_main extends AppCompatActivity {
 
             }
         });
-
+        //The usage instructions dialog
         AlertDialog.Builder help_m = new AlertDialog.Builder(kitchen_main.this);
         help_m.setTitle("Instructions of kitchen-control");
         help_m.setMessage("This interface is used to control 3 types of kitchen devices: kitchen_microwave, light, and kitchen_fridge." + "\n"
@@ -199,12 +197,12 @@ public class kitchen_main extends AppCompatActivity {
         });
         d1 = help_m.create();
     }
-
+    //inflate the help_menu layout
     public boolean onCreateOptionsMenu(Menu m){
         getMenuInflater().inflate(R.menu.kitchen_help_menu, m);
         return true;
     }
-
+    //to show the help dialog when the menu item is selected
     public boolean onOptionsItemSelected(MenuItem mi){
         int id = mi.getItemId();
         if(id == R.id.action_help){
