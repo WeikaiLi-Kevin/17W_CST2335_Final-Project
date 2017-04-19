@@ -13,7 +13,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|number"
         android:ems="10"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
@@ -23,7 +23,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|number"
         android:ems="10"
         android:id="@+id/radioStation6"
         android:hint="@string/autoStation6"
@@ -33,7 +33,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|number"
         android:ems="10"
         android:id="@+id/radioStation2"
         android:hint="@string/autoStation2"
@@ -43,7 +43,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|number"
         android:ems="10"
         android:id="@+id/radioStation3"
         android:hint="@string/autoStation3"
@@ -53,7 +53,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|number"
         android:ems="10"
         android:id="@+id/radioStation4"
         android:hint="@string/autoStation4"
@@ -63,7 +63,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|number"
         android:ems="10"
         android:id="@+id/radioStation5"
         android:hint="@string/autoStation5"

@@ -14,20 +14,20 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
-import static com.teamwork.final_project.MainActivity.ACTIVITY_NAME;
+//import static com.teamwork.final_project.MainActivity.ACTIVITY_NAME;
 
 public class AutomobileRadio extends AppCompatActivity {
-    private SQLiteDatabase autoDB;
+    private SQLiteDatabase autoDB;   //   use to hold all info of automobile database
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_automobile_radio);
-        final EditText rs1 = (EditText) findViewById(R.id.radioStation1);
-        final EditText rs2 = (EditText) findViewById(R.id.radioStation2);
-        final EditText rs3 = (EditText) findViewById(R.id.radioStation3);
-        final EditText rs4 = (EditText) findViewById(R.id.radioStation4);
-        final EditText rs5 = (EditText) findViewById(R.id.radioStation5);
-        final EditText rs6 = (EditText) findViewById(R.id.radioStation6);
+        final EditText rs1 = (EditText) findViewById(R.id.radioStation1);    //    hold the radio station 1 input by user
+        final EditText rs2 = (EditText) findViewById(R.id.radioStation2);//    hold the radio station 2 input by user
+        final EditText rs3 = (EditText) findViewById(R.id.radioStation3);//    hold the radio station 3 input by user
+        final EditText rs4 = (EditText) findViewById(R.id.radioStation4);//    hold the radio station 4 input by user
+        final EditText rs5 = (EditText) findViewById(R.id.radioStation5);//    hold the radio station 5 input by user
+        final EditText rs6 = (EditText) findViewById(R.id.radioStation6);//    hold the radio station 6 input by user
 
         Button btn = (Button) findViewById(R.id.radioBtn);
 
@@ -37,6 +37,7 @@ public class AutomobileRadio extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // insert all radio stations into database
                 autoTempValues.put(DatabaseHelper.KEY_MESSAGE,rs1.getText().toString() );
                 autoTempValues.put(DatabaseHelper.AUTO_COLUMN_NAME,"radio station 1");
                 autoDB.insert(DatabaseHelper.AUTO_DATABASE_NAME, "", autoTempValues);
@@ -68,12 +69,12 @@ public class AutomobileRadio extends AppCompatActivity {
                 int messageIndex = results.getColumnIndex(DatabaseHelper.KEY_MESSAGE);
                 results.moveToFirst();
                 while(!results.isAfterLast()) {
-                    Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
-                    Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
+          //          Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
+          //          Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
                     results.moveToNext();
                 }
                 for(int num = 0 ;num<results.getColumnCount();num++)
-                    Log.i(ACTIVITY_NAME,results.getColumnName( num));
+           //         Log.i(ACTIVITY_NAME,results.getColumnName( num));
                 Toast.makeText(AutomobileRadio.this, getString(R.string.autoSubmitSuccessful), Toast.LENGTH_LONG).show();
             }
         });

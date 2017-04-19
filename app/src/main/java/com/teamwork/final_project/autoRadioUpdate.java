@@ -12,8 +12,8 @@ import android.widget.ProgressBar;
 
 
 public class autoRadioUpdate extends AppCompatActivity {
-    String stationNum, radioNum;
-    Long deleteId;
+    String stationNum, radioNum;   //    hold databse info of station number and radio number
+    Long deleteId;  //   hold database id column info
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,15 +21,17 @@ public class autoRadioUpdate extends AppCompatActivity {
         final EditText ed = (EditText)findViewById(R.id.autoRadioUpdateETNew);
         Button btn = (Button)findViewById(R.id.autoRadioUpdateBtnNew);
         final ProgressBar pb = (ProgressBar)findViewById(R.id.autoProgressBar);
-        stationNum =  getIntent().getExtras().get("updateStationNum").toString();//得到新Activity 关闭后返回的数据
-        radioNum =  getIntent().getExtras().get("updateRadioNum").toString();
-        deleteId =  getIntent().getExtras().getLong("id");
-        Log.i("update get result stati", "" + stationNum);
-        Log.i("update get result radio",radioNum);
-        Log.i("update id",deleteId+"");
+        stationNum =  getIntent().getExtras().get("updateStationNum").toString();//get result from last activity by call the key word "updateStationNum"
+        radioNum =  getIntent().getExtras().get("updateRadioNum").toString();//get result from last activity by call the key word "updateRadioNum"
+
+        deleteId =  getIntent().getExtras().getLong("id");//get result from last activity by call the key word "id"
+
+//        Log.i("update get result stati", "" + stationNum);
+//        Log.i("update get result radio",radioNum);
+//        Log.i("update id",deleteId+"");
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {  // pass info by clicking the button
 
                 Intent data = new Intent();
                 data.putExtra("updateStationNum", stationNum);
@@ -52,7 +54,7 @@ public class autoRadioUpdate extends AppCompatActivity {
         });
         ed.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {    //progress bar will be invisible by clicking the edit view
 
                 pb.setVisibility(View.INVISIBLE);
 

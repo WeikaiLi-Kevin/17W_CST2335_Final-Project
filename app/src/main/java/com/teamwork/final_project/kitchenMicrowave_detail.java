@@ -1,8 +1,8 @@
 package com.teamwork.final_project;
 
 import android.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class kitchenMicrowave_detail extends AppCompatActivity {
 

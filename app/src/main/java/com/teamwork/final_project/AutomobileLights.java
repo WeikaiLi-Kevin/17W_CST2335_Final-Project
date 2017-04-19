@@ -14,7 +14,7 @@ import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.Toast;
 
-import static com.teamwork.final_project.MainActivity.ACTIVITY_NAME;
+//import static com.teamwork.final_project.MainActivity.ACTIVITY_NAME;
 import static com.teamwork.final_project.R.mipmap.temp;
 
 public class AutomobileLights extends AppCompatActivity {
@@ -26,9 +26,9 @@ public class AutomobileLights extends AppCompatActivity {
        // final EditText temp = (EditText) findViewById(R.id.tempTxt);
         Button btn = (Button) findViewById(R.id.autoLightsBtn);
         final RadioGroup rg = (RadioGroup) findViewById(R.id.autoRadioGroup);
-        final RadioButton rb1 = (RadioButton) findViewById(R.id.autoLightClose);
-        final RadioButton rb2 = (RadioButton) findViewById(R.id.autoLightNormal);
-        final RadioButton rb3 = (RadioButton) findViewById(R.id.autoLightHigh);
+        final RadioButton rb1 = (RadioButton) findViewById(R.id.autoLightClose);  //  button for closing light
+        final RadioButton rb2 = (RadioButton) findViewById(R.id.autoLightNormal);  //  button for open normal light
+        final RadioButton rb3 = (RadioButton) findViewById(R.id.autoLightHigh);   //  button for open high light
         final Switch sw = (Switch) findViewById(R.id.autoLightDimmable);
         DatabaseHelper autodbHelper = new DatabaseHelper(this);
         autoDB = autodbHelper.getWritableDatabase();
@@ -67,12 +67,12 @@ public class AutomobileLights extends AppCompatActivity {
                 int messageIndex = results.getColumnIndex(DatabaseHelper.KEY_MESSAGE);
                 results.moveToFirst();
                 while(!results.isAfterLast()) {
-                    Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
-                    Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
+ //                   Log.i(ACTIVITY_NAME,"SQL MESSAGE:"+results.getString(messageIndex));
+ //                   Log.i(ACTIVITY_NAME,"Cursor's column count =" + results.getColumnCount()) ;
                     results.moveToNext();
                 }
                 for(int num = 0 ;num<results.getColumnCount();num++)
-                    Log.i(ACTIVITY_NAME,results.getColumnName( num));
+ //                   Log.i(ACTIVITY_NAME,results.getColumnName( num));
                 Toast.makeText(AutomobileLights.this, getString(R.string.autoSubmitSuccessful), Toast.LENGTH_LONG).show();
             }
         });

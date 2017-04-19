@@ -15,9 +15,15 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class AutoListViewDetails extends AppCompatActivity {
-    String stationNum;
-    String radioNum;
+
+    String stationNum;  // pass the station number input by user
+    String radioNum;    // pass the radio number input by user
     Long id;
+
+    /**
+     * create the activity
+     * @param savedInstanceState    pass the parameter
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,14 +63,7 @@ public class AutoListViewDetails extends AppCompatActivity {
                 builder1.setPositiveButton(getString(R.string.autoOK), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        //Log.i("Dialog","1111");
-                        /*
-                        EditText tx = (EditText) inf.findViewById(R.id.newMsg) ;
-                        setInp(tx.getText().toString());
-                        Log.i("dialog",getInp());
-                        Snackbar.make(findViewById(R.id.fab),getInp() , Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-*/
+
                         finish();
                     }
                 });
@@ -83,13 +82,14 @@ public class AutoListViewDetails extends AppCompatActivity {
 
             }
         });
+        /**
+         * response the request clicked the update button by user
+         */
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent data = new Intent(AutoListViewDetails.this, autoRadioUpdate.class);
-                // intnt.putExtras(bun);//("ID" , l); //pass the Database ID to next activity
-                // intnt.putExtra("Message",arrayList.get(i));
-                //  intnt.putExtra("I",i);
+
 
                 data.putExtra("updateStationNum", stationNum);
                 data.putExtra("updateRadioNum",radioNum);
@@ -103,6 +103,9 @@ public class AutoListViewDetails extends AppCompatActivity {
 
             }
         });
+        /**
+         * response the request clicked the add button by user
+         */
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
