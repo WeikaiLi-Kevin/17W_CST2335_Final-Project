@@ -7,6 +7,7 @@ import android.util.Log;
 
 /**
  * Created by jgma on 4/3/2017.
+ * This class creates the database to store the kitchen devices.
  */
 
 public class kitchenDatabaseHelper extends SQLiteOpenHelper {
@@ -22,7 +23,7 @@ public class kitchenDatabaseHelper extends SQLiteOpenHelper {
     public kitchenDatabaseHelper(Context ctx){
         super(ctx, DATABASE_NAME, null, VERSION_NUM);
     }
-
+    //create the database
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TableName + "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -32,7 +33,7 @@ public class kitchenDatabaseHelper extends SQLiteOpenHelper {
 
         Log.i("kitchenDatabaseHelper", "Calling onCreate");
     }
-
+    //If the version number of the database increased, the method will be called.
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
         db.execSQL("DROP TABLE IF EXISTS " + TableName);
         onCreate(db);
